@@ -1,0 +1,32 @@
+<h2 class="page-header">
+	Manage of Individuals
+	<a href="#!/individuals/add" class="btn btn-primary pull-right">Create New</a>
+</h2>
+<div class="table-responsive">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Name</th>
+	      <th>Email</th>
+	      <th>Created at</th>
+	      <th>Updated at</th>
+	      <th>Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<tr ng-repeat="individual in individuals">
+			<td>{{$index + 1}}</td>
+			<td>{{individual.name}} {{individual.lastName}}</td>			
+			<td>{{individual.email}}</td>
+			<td>{{individual.created_at}}</td>
+			<td>{{individual.updated_at}}</td>
+			<td>
+				<a href="#!/individuals/edit/{{individual.id}}" title="Edit Individual" class="text-warning"><span class="fa fa-edit"></span></a>
+				|
+				<a ng-click="delete(individual.id)" style="cursor: pointer;" class="text-danger" title="Delete Individual"><span class="fa fa-trash"></span></a>
+			</td>
+		</tr>
+	  </tbody>
+	</table>
+</div>

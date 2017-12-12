@@ -1,0 +1,38 @@
+<h2 class="page-header">
+	Manage of Groups
+	<a href="#!/groups/add" class="btn btn-primary pull-right">Create New</a>
+</h2>
+<div class="table-responsive">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Name</th>
+	      <th>Type</th>
+	      <th>Total of Members</th>
+	      <th>Created at</th>
+	      <th>Updated at</th>
+	      <th>Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<tr ng-repeat="group in groups">
+			<td>{{$index + 1}}</td>
+			<td>{{group.name}}</td>
+			<td>{{group.type.name}}</td>
+			<td class="">0</td>
+			<td>{{group.created_at | asDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+			<td>{{group.updated_at | asDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+			<td>
+				<a href="#!/groups/{{group.id}}" title="View Group"><span class="fa fa-eye"></span></a>
+				|
+				<a href="#!/groups/edit/{{group.id}}" title="Edit Group" class="text-warning"><span class="fa fa-edit"></span></a>
+				|
+				<a ng-click="delete(group.id)" style="cursor: pointer;" class="text-danger" title="Delete Group"><span class="fa fa-trash"></span></a>				
+				
+				<a href="#!/groups/members/{{group.id}}" class="btn btn-xs btn-default pull-right">Add/Remove Members</a>
+			</td>
+		</tr>
+	  </tbody>
+	</table>
+</div>

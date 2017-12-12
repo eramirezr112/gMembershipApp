@@ -1,0 +1,22 @@
+<h2 class="page-header">
+	New Group
+	<a href="#!/groups" class="btn btn-default btn-sm pull-right"> &lt;&lt;&lt; Back to the list</a>
+</h2>
+<div class="row">
+	<div class="col-md-6">
+		<form>
+		  <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" id="name" ng-model="groupName" placeholder="Name of Group">
+		  </div>
+		  <div class="form-group">
+		    <label for="typeGroup">Type</label>
+            <select id="typeGroup" class="form-control" ng-model="typeGroup"
+              ng-options="option.name for option in types track by option.id">
+              <option value="">- Choose Type -</option>
+            </select>
+		  </div>
+		  <button type="button" class="btn btn-primary" ng-click="create()">Create</button>
+		</form>
+	</div>
+</div>
