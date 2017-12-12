@@ -10,7 +10,7 @@ Please follow this steps for installation, testing and review:
 - Open your terminal and inside you reposirtory run this command:
   **php artisan key:generate**
 - In your terminal and and into the repository run the follow command for create the database:
-  ** php artisan migrate --seed **
+  **php artisan migrate --seed**
 
 ## Autor
 
