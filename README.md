@@ -11,8 +11,10 @@ Please follow this steps for installation, testing and review:
   **php artisan key:generate**
 - In your terminal and and into the repository run the follow command for create the database:
   **php artisan migrate --seed**
+- Finally run **php artisan serve**, then open you browser and type **http://localhost:8000**
 
+  
 ## Autor
 
 Ing. Esteban Ramirez Ruiz
-Full Stack Web Developer
+- Full Stack Web Developer
